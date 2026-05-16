@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36">
+  <diagram name="Page-1" id="-H_mtQnk-PTXWXPvYvuk">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zA23MoTUsTF4_91t8viU-2" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="MongoDB&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp;Шард 1&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="106" width="60" x="371" y="361" as="geometry" />
+        </mxCell>
+        <mxCell id="zA23MoTUsTF4_91t8viU-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="pymongo-api" vertex="1">
+          <mxGeometry height="60" width="120" x="456" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-3" edge="1" parent="1" source="fENYJt47hIKyAEiVyFFN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;" target="fENYJt47hIKyAEiVyFFN-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Роутер" vertex="1">
+          <mxGeometry height="40" width="120" x="341" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-14" edge="1" parent="1" source="fENYJt47hIKyAEiVyFFN-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fENYJt47hIKyAEiVyFFN-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Роутер" vertex="1">
+          <mxGeometry height="40" width="120" x="601" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-7" edge="1" parent="1" source="fENYJt47hIKyAEiVyFFN-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fENYJt47hIKyAEiVyFFN-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-8" edge="1" parent="1" source="fENYJt47hIKyAEiVyFFN-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fENYJt47hIKyAEiVyFFN-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Драйвер" vertex="1">
+          <mxGeometry height="40" width="120" x="461" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-9" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="MongoDB&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp;Шард 2&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="106" width="60" x="631" y="361" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-10" edge="1" parent="1" source="fENYJt47hIKyAEiVyFFN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="zA23MoTUsTF4_91t8viU-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-11" edge="1" parent="1" source="fENYJt47hIKyAEiVyFFN-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="fENYJt47hIKyAEiVyFFN-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Конфигурационный сервер" vertex="1">
+          <mxGeometry height="40" width="120" x="731" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="fENYJt47hIKyAEiVyFFN-16" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="401" y="327" as="sourcePoint" />
+            <mxPoint x="661" y="327" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
