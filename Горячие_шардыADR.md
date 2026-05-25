@@ -8,16 +8,43 @@
 из популярных категорий могут создавать непропорциональную нагрузку на отдельные узлы.
 
 ### <a name="_u8xz25hbrgql"></a>**Решение**
-На данный момент распределение продуктов по шардам происходит по категориям товаров, для устраниния проблемы нам нужно
-обеспечить более равномерное распределение товаров из разных категорий по всем шардам. Для этого нужно 
-в составной ключ добавить уникальное значение, подойдет идентификатор продукта. 
+Для решения проблемы будет использовать zoned tag sharding. Если у нас например три шарда, то выделим два шарда под электронику
+и один шард под все остальные категории, тогда у нас получится примерно одинаковое распределение запросов. На шарды надо
+повесить теги:
 
-```javascript
-sh.shardCollection("shop.products", {
-    "category": 1, 
-    "_id": 1
-})
+```shell
+sh.addShardToZone("shard01", "ZONE_ELECTRONICS")
+sh.addShardToZone("shard02", "ZONE_ELECTRONICS")  
+sh.addShardToZone("shard03", "ZONE_OTHER")
+
+sh.shardCollection("shop.products", { "category": 1, "id": 1 })
+
+
+sh.addTagRange(
+    "shop.products",
+    { "category": MinKey, "id": MinKey },
+    { "category": "Electronics", "id": MinKey },
+    "ZONE_OTHER"
+)
+
+sh.addTagRange(
+    "shop.products",
+    { "category": "Electronics", "id": MinKey },
+    { "category": "Electronics", "id": MaxKey },
+    "ZONE_ELECTRONICS"
+)
+
+sh.addTagRange(
+    "shop.products",
+    { "category": "Electronics\uFFFF", "id": MinKey },
+    { "category": MaxKey, "id": MaxKey },
+    "ZONE_OTHER"
+)
 ```
+
+Эти настройки помогут распределить категорию electronics между двумя шардами, а в третий шард будут попадать все остальные
+категории.
+
 
 Для мониторинга и своевременного выявления "горячих" шард можно пользоваться готовыми prometheus метриками для mongo db (настроить интеграцию с графаной и мониторить на дашбордах).
 
